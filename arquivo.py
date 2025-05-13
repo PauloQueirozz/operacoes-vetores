@@ -5,22 +5,30 @@ operacao = int(input('''[ 1 ] Adição/subtração
 [ 5 ] Produto Misto
 Qual operação você quer fazer? '''))
 
-# INCOMPLETO
+if operacao == 1:
+   a, b, c = (list(map(float, input('A, B, C: ').split())))
+   d, e, f = (list(map(float, input('D, E, F: ').split())))
+   print(f'''Adição: ({a+d:.2f}, {b+e:.2f}, {c+f:.2f})
+Subtração: ({a-d:.2f}, {b-e:.2f}, {c-f:.2f})''')
+
+if operacao == 2:
+   vetor = float(input('Vetor: '))
+   a, b, c = (list(map(float, input('A, B, C: ').split())))
+   print(f'Multiplicação por escala: ({a*vetor:.2f}, {b*vetor:.2f}, {c*vetor:.2f})')
 
 if operacao == 3:
-   a, b, c = (list(map(int, input('A, B, C: ').split())))
-   d, e, f = (list(map(int, input('D, E, F: ').split())))
+   a, b, c = (list(map(float, input('A, B, C: ').split())))
+   d, e, f = (list(map(float, input('D, E, F: ').split())))
    produto_interno = (a*d)+(b*e)+(c*f)
-   print(f'Produto interno: {produto_interno}')
+   print(f'Produto interno: {produto_interno:.2f}')
    
 if operacao == 4:
-   a, b, c = (list(map(int, input('A, B, C: ').split())))
-   d, e, f = (list(map(int, input('D, E, F: ').split())))
+   a, b, c = (list(map(float, input('A, B, C: ').split())))
+   d, e, f = (list(map(float, input('D, E, F: ').split())))
    i = ((b*f)-(c*e))
    j = ((c*d)-(a*f))
    k = ((a*e)-(b*d))
-   print(f'Produto Vetorial: ({i}, {j}, {k})')
-
+   print(f'Produto Vetorial: ({i:.2f}, {j:.2f}, {k:.2f})')
 
 # FALTA IDENTIFICAR OS SINAIS
 # if operacao == 5: 
