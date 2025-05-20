@@ -58,6 +58,6 @@ elif operacao == 4:
 elif operacao == 5: 
    a, b, c = (list(map(int, input('A, B, C: ').split())))
    d, e, f = (list(map(int, input('D, E, F: ').split())))
-   g, h, i = (list(map(int, input('D, E, F: ').split())))
+   g, h, i = (list(map(int, input('G, H, I: ').split())))
    produto_misto = (a*((e*i)-(f*h)))+(b*((f*g)-(d*i)))+(c*((d*h)-(e*g)))
    print(f'Produto Misto: {produto_misto}')
